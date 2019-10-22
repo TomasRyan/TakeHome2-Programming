@@ -159,6 +159,7 @@
     <ClCompile Include="TakeHome2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Battle.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCharacter.h" />
