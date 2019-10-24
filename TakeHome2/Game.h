@@ -33,6 +33,6 @@ public:
 	//	input: GameCharacter* and GameCharacter* to be compared against each other
 	void printBattle(GameCharacter* a, GameCharacter* b);
 	// print out a graphic to show who won a battle
-//	input: GameCharacter*
+	//	input: GameCharacter*
 	void printVictor(GameCharacter* a);
 };

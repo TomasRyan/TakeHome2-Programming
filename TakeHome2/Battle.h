@@ -1,12 +1,13 @@
 #include "GameCharacter.h";
 #include <list>;
 
-class GameCharacter {
+class Battle {
 private:
 	list<GameCharacter*> vpGameCharacters;
 	list<GameCharacter*> battleGrid[8][8] = {};
 	list<string> battleReview;
 public:
+	Battle();
 	// one round of battle, so player input, action, and result
 	void roundOfBattle();
 	// check health to see whos dead

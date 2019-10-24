@@ -1,0 +1,22 @@
+﻿  Main.cpp
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Main.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Game.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Game.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Player.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Game.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Enemy.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Game.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Battle.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Battle.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+TakeHome2.obj : error LNK2005: main already defined in Main.obj
+Fighter.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::attack(void)" (?attack@GameCharacter@@UEAAXXZ)
+Game.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::attack(void)" (?attack@GameCharacter@@UEAAXXZ)
+Goblin.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::attack(void)" (?attack@GameCharacter@@UEAAXXZ)
+Fighter.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::Special1(void)" (?Special1@GameCharacter@@UEAAXXZ)
+Game.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::Special1(void)" (?Special1@GameCharacter@@UEAAXXZ)
+Goblin.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::Special1(void)" (?Special1@GameCharacter@@UEAAXXZ)
+Fighter.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::Special2(void)" (?Special2@GameCharacter@@UEAAXXZ)
+Game.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::Special2(void)" (?Special2@GameCharacter@@UEAAXXZ)
+Goblin.obj : error LNK2001: unresolved external symbol "public: virtual void __cdecl GameCharacter::Special2(void)" (?Special2@GameCharacter@@UEAAXXZ)
+C:\Tammie files\TakeHome2\TakeHome2-Programming\x64\Debug\TakeHome2.exe : fatal error LNK1120: 3 unresolved externals
