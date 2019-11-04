@@ -5,5 +5,10 @@ private:
 
 public:
 	Goblin();
-	void attack();
+	virtual void action();
+	void attack(GameCharacter target);
+	// virtual, so no definition within GameCharacter, check player and enemy for definition
+	virtual  void Special1(GameCharacter target);
+	// virtual, so no definition within GameCharacter, check player and enemy for definition
+	virtual  void Special2(GameCharacter target);
 };

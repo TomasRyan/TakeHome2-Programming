@@ -5,7 +5,9 @@ private:
 
 public:
 	Fighter();
-	void attack();
-	void Special1();
-	void Special2();
+	virtual void action();
+	void attack(GameCharacter target);
+	virtual void Special1(GameCharacter target);
+	// virtual, so no definition within GameCharacter, check player and enemy for definition
+	virtual void Special2(GameCharacter target);
 };

@@ -2,6 +2,7 @@
 #define GameCharacter_HEADER
 #include <iostream>
 #include <time.h>
+#include "Role.h";
 using namespace std;
 //--------------------------------------------
 //	Tomás Ryan
@@ -10,39 +11,30 @@ using namespace std;
 //--------------------------------------------
 //	GameCharacter.h
 //--------------------------------------------
+
 class GameCharacter {
+
 protected: // protected so that classed that inheret from here cn access them
-	std::string m_typeID;
-	int m_health;
-	int m_speed; // value between 1 and 3
-	int m_x;
-	int m_y;
+	
+	role m_typeID = blank;
+	int m_health = 0;
+	int m_speed = 0; 
 	//--------------------------------
 	// new stuff
-	int m_attack;
-	int m_defense;
-	int m_magicpower;
-	int m_luck;
-	int m_skillPoints; // currency to be spent on moves
+	int m_attack = 0;
+	int m_defense = 0;
+	int m_magicpower = 0;
+	int m_luck = 0;
+	int m_skillPoints = 0; // currency to be spent on moves
 public:
-// this default constructer should NEVER be used
-	GameCharacter() {
-		this->m_typeID = "error";
-		this->m_health = 0;
-		this->m_speed = 0;
-		this->m_x = 111;
-		this->m_y = 111;
-	}
 	
-	// for sort function with overloading the < function for comparing positions of 2 GameCHaretcters 
-	bool operator<(const GameCharacter& a) const
-	{
-		return ((this->m_x * (this->m_y * 12)) < (a.m_x * (a.m_y * 12)));
-	}
+// this default constructer should NEVER be used (used for empty spaces
+	GameCharacter();
+	
 	// compares this object of gameCHarecter to one passed in, so that health values can be compared to return a bool
 	bool compareHealth(const GameCharacter& a) const;
 	// print to the screen the typeID, used to draw its position within the gameScreen
-	void spawn(std::string typeID, int health, int speed, int x, int y);
+	void spawn(role typeID, int health, int speed);
 	// print all stats relating to the object
 	void render();
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
@@ -56,14 +48,19 @@ public:
 	// randomises the position of GameCharacter
 	void RandomPos();
 	// returns the numuracal position (int) of the GameCharacter within the 144 possible spaces
-	int getPos();
+	//int getPos();
 	// returns the m_typesID string when called
-	string getName() const;
+	role getRole();
+
+	void takeDamage(int damage);
+
+	virtual void action();
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
-	virtual void attack();
+	virtual void attack(GameCharacter target);
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
-	virtual void Special1();
+	virtual void Special1(GameCharacter target);
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
-	virtual void Special2();
+	virtual void Special2(GameCharacter target);
+	
 };
 #endif

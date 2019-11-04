@@ -1,10 +1,12 @@
 #include "GameCharacter.h";
+#include "Fighter.h"
+#include "Goblin.h"
 #include <list>;
 
 class Battle {
 private:
 	list<GameCharacter*> vpGameCharacters;
-	list<GameCharacter*> battleGrid[8][8] = {};
+	list<GameCharacter*> battleGrid[8][8];
 	list<string> battleReview;
 public:
 	Battle();

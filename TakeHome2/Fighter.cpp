@@ -1,10 +1,18 @@
 #include "Fighter.h";
 Fighter::Fighter() {
-	m_typeID = "Fighter";
+	this->m_typeID = fighter;
 
 }
-void Fighter::attack() {
+void Fighter::attack(GameCharacter target) {
 
 }
-void Fighter::Special1() {}
-void Fighter::Special2() {}
+void Fighter::Special1(GameCharacter target) {
+
+}
+void Fighter::Special2(GameCharacter target) {
+
+}
+
+void Fighter::action() {
+
+}
