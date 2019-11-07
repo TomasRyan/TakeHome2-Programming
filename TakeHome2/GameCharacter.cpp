@@ -59,7 +59,7 @@ void GameCharacter::RandomPos() {
 	this->m_y = rand() % 13 + 0;*/
 }
 // returns the m_typesID enum when called
-role GameCharacter::getRole() {
+int GameCharacter::getRole() {
 	return this->m_typeID;
 }
 void GameCharacter::takeDamage(int damage) {
@@ -68,13 +68,11 @@ void GameCharacter::takeDamage(int damage) {
 void GameCharacter::action() {
 
 }
-void GameCharacter::attack(GameCharacter target) {
+void GameCharacter::attack() {
 
 }
-void GameCharacter::Special1(GameCharacter target) {
+void GameCharacter::Special1() {
 
 }
-void GameCharacter::Special2(GameCharacter target) {
 
-}
 

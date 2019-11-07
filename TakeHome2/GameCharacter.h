@@ -2,7 +2,7 @@
 #define GameCharacter_HEADER
 #include <iostream>
 #include <time.h>
-#include "Role.h";
+#include "Enums.h";
 using namespace std;
 //--------------------------------------------
 //	Tomás Ryan
@@ -16,14 +16,13 @@ class GameCharacter {
 
 protected: // protected so that classed that inheret from here cn access them
 	
-	role m_typeID = blank;
+	int m_typeID = blank;
 	int m_health = 0;
 	int m_speed = 0; 
 	//--------------------------------
 	// new stuff
 	int m_attack = 0;
 	int m_defense = 0;
-	int m_magicpower = 0;
 	int m_luck = 0;
 	int m_skillPoints = 0; // currency to be spent on moves
 public:
@@ -50,17 +49,15 @@ public:
 	// returns the numuracal position (int) of the GameCharacter within the 144 possible spaces
 	//int getPos();
 	// returns the m_typesID string when called
-	role getRole();
+	int getRole();
 
 	void takeDamage(int damage);
 
 	virtual void action();
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
-	virtual void attack(GameCharacter target);
+	virtual void attack();
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
-	virtual void Special1(GameCharacter target);
-	// virtual, so no definition within GameCharacter, check player and enemy for definition
-	virtual void Special2(GameCharacter target);
+	virtual void Special1();
 	
 };
 #endif

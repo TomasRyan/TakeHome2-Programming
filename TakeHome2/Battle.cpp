@@ -1,4 +1,5 @@
 #include "Battle.h";
+
 Battle::Battle() {
 	Fighter* f = new Fighter();
 	vpGameCharacters.push_back(f);
@@ -23,6 +24,37 @@ Battle::Battle() {
 			battleGrid[4][5].insert(it, g);
 		}
 		cout << "Did a round" << endl;
+	}
+}
+
+void Battle::roundOfBattle() {
+	//////////////////////////////////////////////////////////////
+	// special move pick
+	cout << "Who would you like to use there ability??" << endl;
+	int count = 1;
+	int input;
+	for (GameCharacter* g : vpGameCharacters) {
+		cout << count << ": " << g->getRole() << endl;
+		count++;
+	}
+	cin >> input;
+	input = i.numberChecker(input, 0, vpGameCharacters.size());
+	input--;
+	list<GameCharacter*>::iterator skillPick = vpGameCharacters.begin();
+	// scroll iterator to selected charecter
+	for (int i = 0; i < input; i++) {
+		skillPick++;
+	}
+	(*skillPick)->Special1();
+	////////////////////////////////////////////////////////////////
+	// player party attacks
+	for (GameCharacter* g : vpGameCharacters) {
+		g->attack();
+
+	}
+	for (GameCharacter* e : vpEnemys) {
+		e->attack();
+
 	}
 }
 

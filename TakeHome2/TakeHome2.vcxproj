@@ -155,6 +155,7 @@
     <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="Goblin.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -162,7 +163,8 @@
     <ClInclude Include="Fighter.h" />
     <ClInclude Include="GameCharacter.h" />
     <ClInclude Include="Goblin.h" />
-    <ClInclude Include="Role.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="Enums.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
