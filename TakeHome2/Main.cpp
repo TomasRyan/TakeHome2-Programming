@@ -1,5 +1,6 @@
 
 #include "Battle.h"
+#include "StoryTeller.h"
 //--------------------------------------------
 //	Tomás Ryan
 //	k00243524
@@ -8,8 +9,24 @@
 //
 //--------------------------------------------
 int main() {
-	Battle b = Battle();
-	b.printBattle();
 	system("Cls");
+	//Battle b = Battle();
+	//b.printBattle();
+	string t = "this is a test";
+	list<string> listStringTest;
+	string temp1 = "temp1";
+	string temp2 = "temp2";
+	string temp3 = "temp3";
+	listStringTest.push_back(temp1);
+	listStringTest.push_back(temp2);
+	listStringTest.push_back(temp3);
+	list<int> testInt = { 1, 2, };
+	Chapter test(t, listStringTest, testInt);
+	test.printText();
+	test.printResponse(0);
+	list<Chapter*> c;
+	c.push_back(&test);
+	StoryTeller story(c);
+	story.printSection(0);
 	system("Pause");
 }

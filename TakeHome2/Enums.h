@@ -14,12 +14,14 @@ enum role
 
 enum Verbs
 {
+	Error,
 	Look,
 	Talk,
 	Use,
-	sneak,
-	attack,
-	pickUp,
-	open, 
-	rest
+	Sneak,
+	Attack,
+	PickUp,
+	Open, 
+	Rest,
+	Inspect
 };

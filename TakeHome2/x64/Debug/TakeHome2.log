@@ -1,8 +1,11 @@
 ﻿  Main.cpp
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Battle.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\GameCharacter.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Fighter.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Goblin.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Battle.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Battle.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  TakeHome2.vcxproj -> C:\Tammie files\TakeHome2\TakeHome2-Programming\x64\Debug\TakeHome2.exe
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\GameCharacter.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Fighter.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Goblin.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\InputHandler.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  StoryTeller.cpp
+  Generating Code...
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  TakeHome2.vcxproj -> C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\x64\Debug\TakeHome2.exe
