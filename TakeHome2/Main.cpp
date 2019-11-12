@@ -10,5 +10,6 @@
 int main() {
 	Battle b = Battle();
 	b.printBattle();
+	system("Cls");
 	system("Pause");
 }

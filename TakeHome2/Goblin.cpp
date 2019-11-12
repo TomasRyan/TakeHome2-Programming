@@ -10,4 +10,3 @@ void Goblin::attack() {
 void Goblin::Special1() {
 	bool something = true;
 }
-
