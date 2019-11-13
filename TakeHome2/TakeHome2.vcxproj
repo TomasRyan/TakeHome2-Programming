@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="Battle.cpp" />
     <ClCompile Include="Chapter.cpp" />
+    <ClCompile Include="Creator.cpp" />
     <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="Goblin.cpp" />
@@ -163,6 +164,7 @@
   <ItemGroup>
     <ClInclude Include="Battle.h" />
     <ClInclude Include="Chapter.h" />
+    <ClInclude Include="Creator.h" />
     <ClInclude Include="Fighter.h" />
     <ClInclude Include="GameCharacter.h" />
     <ClInclude Include="Goblin.h" />

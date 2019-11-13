@@ -9,13 +9,14 @@ int InputHandler::numberChecker(int num,int rangeLow, int rangeHigh) {
 		return NULL;
 }
 
-list<int> InputHandler::verbChecker(string s) {
+int InputHandler::verbChecker(string s) {
 	transform(s.begin(), s.end(), s.begin(), ::tolower); // make lower case
+	s += "/";
 	list<int> words;
 	string temp = "";
 	for (auto x : s)
 	{
-		if (x == ' ')
+		if (x == ' ' || x == '/') // creates the word then checks against these values
 		{
 			if (temp == "look") {
 				words.push_back(Look);
@@ -26,8 +27,8 @@ list<int> InputHandler::verbChecker(string s) {
 			else if (temp == "use") {
 				words.push_back(Use);
 			}
-			else if (temp == "sneak") {
-				words.push_back(Sneak);
+			else if (temp == "go") {
+				words.push_back(Go);
 			}
 			else if (temp == "attack") {
 				words.push_back(Attack);
@@ -54,5 +55,15 @@ list<int> InputHandler::verbChecker(string s) {
 			temp = temp + x;
 		}
 	}
-	return words;
+	if (words.size() > 0) {
+		if (words.size() > 1) {
+			// uh figure out later
+		}
+		else {
+			return words.front();
+		}
+	}
+	else {
+		return Error;
+	}
 }
