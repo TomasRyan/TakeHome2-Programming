@@ -154,22 +154,28 @@
     <ClCompile Include="Battle.cpp" />
     <ClCompile Include="Chapter.cpp" />
     <ClCompile Include="Creator.cpp" />
+    <ClCompile Include="Dijkstra%27s Algorithm.cpp" />
     <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Party.cpp" />
     <ClCompile Include="StoryTeller.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Battle.h" />
     <ClInclude Include="Chapter.h" />
     <ClInclude Include="Creator.h" />
+    <ClInclude Include="Dijkstra%27s Algorithm.h" />
     <ClInclude Include="Fighter.h" />
     <ClInclude Include="GameCharacter.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Enums.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Party.h" />
     <ClInclude Include="StoryTeller.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

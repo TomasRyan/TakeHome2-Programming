@@ -35,6 +35,7 @@ void StoryTeller::getResponse() {
 	int counter = 0;
 	string temp = "";
 	cin >> temp;
+	cout << "----------------------------------------" << endl;
 	for (Chapter c : this->ChapterList) {
 		if (counter == this->currentSection) {
 			int nextScene = c.printResponse(temp);

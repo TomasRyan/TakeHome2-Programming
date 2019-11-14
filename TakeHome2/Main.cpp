@@ -41,8 +41,12 @@ int main() {
 	StoryTeller story(c);
 	while (story.fightCheck() == false) {
 		story.printCurrentChapter();
+		cout << "-----------------------------------" << endl;
 		story.getResponse();
-		cout << "####-----------------------------------####" << endl;
+		cout << "----------------------------------------" << endl;
+		system("Pause");
+		cout << "----------------------------------------" << endl;
+		//system("Cls");
 	}
 
 	system("Pause");

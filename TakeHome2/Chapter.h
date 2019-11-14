@@ -16,10 +16,11 @@ private:
 	list<string> responses; // length of enum Verbs, with the resonse correlating with the index of enum verbs
 	list<int> nextChapters; // the index of the chapters that can be accessed from here, correlating to the enum position
 	InputHandler input = InputHandler();
-
+	list<string> availableresponses; // the list of paths avalibale to the player
+	bool random = false;
 public:
 	//	
-	Chapter(int ID, string t, list<string> re, list<int> next);
+	Chapter(int ID, string t, list<string> re, list<int> next, list<string> aRe);
 	//prints string text
 	void printText();
 	// prints out the string at the index of responses and returns the next scene
