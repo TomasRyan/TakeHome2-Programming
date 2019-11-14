@@ -3,6 +3,7 @@
 #include <iostream>
 #include <time.h>
 #include "Enums.h";
+#include <list>
 using namespace std;
 //--------------------------------------------
 //	Tomás Ryan
@@ -24,7 +25,8 @@ protected: // protected so that classed that inheret from here cn access them
 	int m_attack = 0;
 	int m_defense = 0;
 	int m_luck = 0;
-	int m_skillPoints = 0; // currency to be spent on moves
+	int m_xPos = 0;
+	int m_yPos = 0;
 public:
 	
 // this default constructer should NEVER be used (used for empty spaces
@@ -51,9 +53,15 @@ public:
 	// returns the m_typesID string when called
 	int getRole();
 
+	int getXpos();
+
+	int getYpos();
+
+	void changePos(int x, int y);
+
 	void takeDamage(int damage);
 
-	virtual void action();
+	virtual void action(list<GameCharacter*> battleGrid);
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
 	virtual void attack();
 	// virtual, so no definition within GameCharacter, check player and enemy for definition

@@ -2,6 +2,7 @@
 #include "Fighter.h"
 #include "Goblin.h"
 #include "InputHandler.h";
+#include "Dijkstra's Algorithm.h"
 #include <list>;
 
 class Battle {

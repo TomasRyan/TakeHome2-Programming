@@ -62,6 +62,19 @@ void GameCharacter::RandomPos() {
 int GameCharacter::getRole() {
 	return this->m_typeID;
 }
+int GameCharacter::getXpos() {
+	return this->m_xPos;
+}
+
+int GameCharacter::getYpos() {
+	return this->m_yPos;
+}
+
+void GameCharacter::changePos(int x, int y) {
+	m_xPos += x;
+	m_yPos += y;
+}
+
 void GameCharacter::takeDamage(int damage) {
 	this->m_health -= damage;
 }

@@ -38,6 +38,7 @@ void Battle::roundOfBattle() {
 		count++;
 	}
 	cin >> input;
+	cin.clear();
 	input = i.numberChecker(input, 0, vpGameCharacters.size());
 	input--;
 	list<GameCharacter*>::iterator skillPick = vpGameCharacters.begin();
