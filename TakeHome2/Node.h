@@ -10,7 +10,6 @@
 #pragma once
 #include <iostream>
 #include <list>;
-const int length = 11;
 using namespace std;
 class Node {
 private:
@@ -27,7 +26,7 @@ public:
 	bool isFound();
 	void found();
 	void printNode();
-	int getDistanceToPoint(int i);
+	int	getDistanceToPoint(int i);
 	void setConnection(int index, int newValue);
 	void SetPrevious(int index);
 	bool operator==(const Node a) const

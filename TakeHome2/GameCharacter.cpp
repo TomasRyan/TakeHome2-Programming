@@ -78,14 +78,22 @@ void GameCharacter::changePos(int x, int y) {
 void GameCharacter::takeDamage(int damage) {
 	this->m_health -= damage;
 }
-void GameCharacter::action() {
+void GameCharacter::action(list<GameCharacter*> battleGrid) {
 
 }
-void GameCharacter::attack() {
+void GameCharacter::attack(list<GameCharacter*> battleGrid) {
 
 }
 void GameCharacter::Special1() {
 
+}
+
+int GameCharacter::getDistance(GameCharacter target) {
+	/*cout << "X diff: " << target.getXpos() - this->getXpos() << endl;
+	cout << "Y diff: " << target.getYpos() - this->getYpos() << endl;*/
+	return sqrt(pow(target.getXpos() - this->getXpos(), 2) +
+		pow(target.getYpos() - this->getYpos(), 2) * 1.0);
+	//return (this->getYpos() - target.getYpos())/(this->getXpos() - target.getXpos());
 }
 
 

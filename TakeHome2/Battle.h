@@ -10,6 +10,7 @@ private:
 	list<GameCharacter*> vpGameCharacters;
 	list<GameCharacter*> vpEnemys;
 	list<GameCharacter*> battleGrid[8][8];
+	//list<Node*> battleGrid[8][8];
 	list<string> battleReview;
 	InputHandler i;
 public:
@@ -22,4 +23,6 @@ public:
 	void printBattle();
 	// print all the actions of battle, which will be stored within battleReview
 	void printBattleReview();
+	// update battleList()
+	void updateBattleBoard();
 };

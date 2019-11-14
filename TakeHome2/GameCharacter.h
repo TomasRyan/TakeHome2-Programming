@@ -19,7 +19,7 @@ protected: // protected so that classed that inheret from here cn access them
 	
 	int m_typeID = blank;
 	int m_health = 0;
-	int m_speed = 0; 
+	int m_speed = 3; 
 	//--------------------------------
 	// new stuff
 	int m_attack = 0;
@@ -27,6 +27,7 @@ protected: // protected so that classed that inheret from here cn access them
 	int m_luck = 0;
 	int m_xPos = 0;
 	int m_yPos = 0;
+	int attackCount = 1;
 public:
 	
 // this default constructer should NEVER be used (used for empty spaces
@@ -58,14 +59,14 @@ public:
 	int getYpos();
 
 	void changePos(int x, int y);
-
+	// take damage depending on the int taken
 	void takeDamage(int damage);
 
 	virtual void action(list<GameCharacter*> battleGrid);
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
-	virtual void attack();
+	virtual void attack(list<GameCharacter*> battleGrid);
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
 	virtual void Special1();
-	
+	int getDistance(GameCharacter target);
 };
 #endif

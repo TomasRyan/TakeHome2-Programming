@@ -39,15 +39,25 @@ int main() {
 	Creator create = Creator();
 	list<Chapter> c = create.create();
 	StoryTeller story(c);
-	while (story.fightCheck() == false) {
-		story.printCurrentChapter();
-		cout << "-----------------------------------" << endl;
-		story.getResponse();
-		cout << "----------------------------------------" << endl;
-		system("Pause");
-		cout << "----------------------------------------" << endl;
-		//system("Cls");
-	}
-
+	//while (story.fightCheck() == false) {
+	//	//system("Cls");
+	//	story.printCurrentChapter();
+	//	cout << "-----------------------------------" << endl;
+	//	story.getResponse();
+	//	cout << "----------------------------------------" << endl;
+	//	/*system("Pause");
+	//	cout << "----------------------------------------" << endl;*/
+	//}
+	Battle b = Battle();
+	//b.printBattle();
+	b.roundOfBattle();
+	b.updateBattleBoard();
+	b.printBattle();
+	b.roundOfBattle();
+	b.updateBattleBoard();
+	b.printBattle();
+	b.roundOfBattle();
+	b.updateBattleBoard();
+	b.printBattle();
 	system("Pause");
 }

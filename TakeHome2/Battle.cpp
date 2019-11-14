@@ -1,9 +1,9 @@
 #include "Battle.h";
 
 Battle::Battle() {
-	Fighter* f = new Fighter();
+	Fighter* f = new Fighter(7, 5);
 	vpGameCharacters.push_back(f);
-	Goblin* g = new Goblin();
+	Goblin* g = new Goblin(0, 3);
 	vpGameCharacters.push_back(g);
 	for (int x = 0; x < 8; x++) {
 		for (int y = 0; y < 8; y++) {
@@ -14,18 +14,19 @@ Battle::Battle() {
 	}
 	for (GameCharacter* g : vpGameCharacters) {
 		if (g->getRole() == fighter) {
-			cout << "Fighter insert" << endl;
-			list<GameCharacter*>::iterator it = battleGrid[7][5].begin();
-			battleGrid[7][5].insert(it, g);
+			//cout << "Fighter insert" << endl;
+			list<GameCharacter*>::iterator it = battleGrid[g->getXpos()][g->getYpos()].begin();
+			battleGrid[g->getXpos()][g->getYpos()].insert(it, g);
 		}
 		else if (g->getRole() == goblin) {
-			cout << "Enemy insert" << endl;
-			list<GameCharacter*>::iterator it = battleGrid[4][5].begin();
-			battleGrid[4][5].insert(it, g);
+			//cout << "Enemy insert" << endl;
+			list<GameCharacter*>::iterator it = battleGrid[g->getXpos()][g->getYpos()].begin();
+			battleGrid[g->getXpos()][g->getYpos()].insert(it, g);
 		}
-		cout << "Did a round" << endl;
 	}
 }
+
+
 
 void Battle::roundOfBattle() {
 	//////////////////////////////////////////////////////////////
@@ -43,18 +44,18 @@ void Battle::roundOfBattle() {
 	input--;
 	list<GameCharacter*>::iterator skillPick = vpGameCharacters.begin();
 	// scroll iterator to selected charecter
-	for (int i = 0; i < input; i++) {
+	for(int i = 0; i < input; i++) {
 		skillPick++;
 	}
 	(*skillPick)->Special1();
 	////////////////////////////////////////////////////////////////
 	// player party attacks
 	for (GameCharacter* g : vpGameCharacters) {
-		g->attack();
+		g->attack(vpGameCharacters);
 
 	}
 	for (GameCharacter* e : vpEnemys) {
-		e->attack();
+		e->attack(vpGameCharacters);
 
 	}
 }
@@ -68,10 +69,43 @@ void Battle::printBattle() {
 	for (int x = 0; x < 8; x++) {
 		for (int y = 0; y < 8; y++) {
 			list<GameCharacter*>::iterator it = battleGrid[x][y].begin();
-			cout << x << ", " << y << endl;
-			if ((*it)->getRole() != blank) {
+			cout << " " << (*it)->getRole() << " ";
+			/*if ((*it)->getRole() != blank) {
 				(*it)->stats();
-			}
+			}*/
+		}
+		cout << endl;
+	}
+}
+
+void Battle::updateBattleBoard() {
+	for (int x = 0; x < 8; x++) {
+		for (int y = 0; y < 8; y++) {
+
+			battleGrid[x][y].clear();
+		}
+	}
+	for (int x = 0; x < 8; x++) {
+		for (int y = 0; y < 8; y++) {
+			list<GameCharacter*>::iterator it = battleGrid[x][y].begin();
+			GameCharacter* r = new GameCharacter();
+			battleGrid[x][y].insert(it, r);
+		}
+	}
+	for (GameCharacter* g : vpGameCharacters) {
+		if (g->getRole() == fighter) {
+			//cout << "Fighter insert" << endl;
+			list<GameCharacter*>::iterator it = battleGrid[g->getXpos()][g->getYpos()].begin();
+			battleGrid[g->getXpos()][g->getYpos()].insert(it, g);
+		}
+		else if (g->getRole() == goblin) {
+			//cout << "Enemy insert" << endl;
+			list<GameCharacter*>::iterator it = battleGrid[g->getXpos()][g->getYpos()].begin();
+			battleGrid[g->getXpos()][g->getYpos()].insert(it, g);
 		}
 	}
 }
+
+
+
+

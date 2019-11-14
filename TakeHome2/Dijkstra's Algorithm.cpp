@@ -32,7 +32,7 @@ Dijkstra::Dijkstra(list<Node*> vpN, int startPoint) {
 		}
 		(*itX)->found();
 		itY = vpN.begin();
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < vpN.size(); i++) {
 			if ((*itY)->isFound() != true
 					&& (*itX)->getDistance() != INT_MAX
 					&& (*itX)->getDistanceToPoint(i) != 0
