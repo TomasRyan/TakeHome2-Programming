@@ -1,10 +1,14 @@
 #include "Battle.h";
 
-Battle::Battle() {
-	Fighter* f = new Fighter(7, 5);
+Battle::Battle(Party p) {
+	/*Fighter* f = new Fighter(7, 5);
 	vpGameCharacters.push_back(f);
-	Goblin* g = new Goblin(0, 3);
-	vpGameCharacters.push_back(g);
+	Goblin* g = new Goblin(0, 3, 10);
+	vpGameCharacters.push_back(g);*/
+	vpGameCharacters = p.getPartyList();
+	for (GameCharacter* g : vpGameCharacters) {
+		g->stats();
+	}
 	for (int x = 0; x < 8; x++) {
 		for (int y = 0; y < 8; y++) {
 			list<GameCharacter*>::iterator it = battleGrid[x][y].begin();
@@ -51,12 +55,12 @@ void Battle::roundOfBattle() {
 	////////////////////////////////////////////////////////////////
 	// player party attacks
 	for (GameCharacter* g : vpGameCharacters) {
-		g->attack(vpGameCharacters);
-
+		g->move(vpGameCharacters);
+		this->updateBattleBoard();
 	}
 	for (GameCharacter* e : vpEnemys) {
-		e->attack(vpGameCharacters);
-
+		e->move(vpGameCharacters);
+		this->updateBattleBoard();
 	}
 }
 

@@ -7,6 +7,7 @@ enum role
 	thief,
 	cleric,
 	gunslinger,
+	paladin,
 	goblin,
 	troll,
 	boss

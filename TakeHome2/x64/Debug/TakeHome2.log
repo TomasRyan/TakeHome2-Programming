@@ -1,5 +1,34 @@
-﻿  Fighter.cpp
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Fighter.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\Fighter.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Tammie files\TakeHome2\TakeHome2-Programming\TakeHome2\GameCharacter.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  TakeHome2.vcxproj -> C:\Tammie files\TakeHome2\TakeHome2-Programming\x64\Debug\TakeHome2.exe
+﻿  Battle.cpp
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Fighter.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Goblin.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\InputHandler.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Node.h(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Dijkstra's Algorithm.h(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Party.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Thief.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Cleric.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\GunSlinger.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Paladin.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Mage.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Main.cpp
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.cpp(47,59): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Fighter.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Goblin.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\InputHandler.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Node.h(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Dijkstra's Algorithm.h(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Party.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Thief.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Cleric.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\GunSlinger.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Paladin.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Mage.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\TakeHome2\Battle.h(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  TakeHome2.vcxproj -> C:\Users\tomas\source\repos\algorithm1\TakeHome2-Programming\x64\Debug\TakeHome2.exe

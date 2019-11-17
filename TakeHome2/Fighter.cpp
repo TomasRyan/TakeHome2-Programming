@@ -3,14 +3,23 @@ Fighter::Fighter(int x, int y) {
 	this->m_xPos = x;
 	this->m_yPos = y;
 	this->m_typeID = fighter;
-
 }
-void Fighter::attack(list<GameCharacter*> battleGrid) {
+Fighter::Fighter(string name, int h, int s, int a, int d, int l) {
+	this->m_name = name;
+	this->m_maxHealth = h;
+	this->m_currHealth = h;
+	this->m_speed = s;
+	this->m_attack = a;
+	this->m_defense = d;
+	this->m_luck = l;
+	this->m_typeID = fighter;
+}
+void Fighter::move(list<GameCharacter*> battleGrid) {
 	int moveCounter = 0;
 	int attackCount = 0;
 	int distanceToTarget = INT_MAX;
-	GameCharacter* target = 0;
-	for (GameCharacter* gc : battleGrid) { // not let moved diagonally
+	GameCharacter* target = NULL;
+	for (GameCharacter* gc : battleGrid) { // gets huristic distance to target
 		if (gc->getRole() == goblin || gc->getRole() == troll || gc->getRole() == boss) {
 			if (this->getDistance(*gc) < distanceToTarget) {
 				target = gc;
@@ -24,7 +33,9 @@ void Fighter::attack(list<GameCharacter*> battleGrid) {
 	bool canAttack = false;
 	int directionX = 0;
 	int directionY = 0;
+	//	checks where
 	// x axis
+
 	while (moveCounter < this->m_speed && canAttack == false) {
 		directionX = 0;
 		directionY = 0;
@@ -43,6 +54,7 @@ void Fighter::attack(list<GameCharacter*> battleGrid) {
 		if (distanceToTarget >= 2) {
 			this->m_xPos += directionX;
 			this->m_yPos += directionY;
+			
 			cout << "xPos: " << this->m_xPos << endl;
 			cout << "yPos: " << this->m_yPos << endl;
 			moveCounter++;
@@ -52,14 +64,34 @@ void Fighter::attack(list<GameCharacter*> battleGrid) {
 		else if (distanceToTarget <= 1) {
 			canAttack = true;
 		}
-
+		if (this->PositionCheck(target) == true) {
+			this->m_xPos -= directionX;
+			this->m_yPos -= directionY;
+		}
 	}
 	if (canAttack == true && moveCounter < this->m_speed) {
-		target->takeDamage(this->m_attack);
+		this->attack(target);
 		moveCounter++;
 	}
 }
-void Fighter::Special1() {
 
+void Fighter::attack(GameCharacter* target) {
+	for (int x = 0; x < this->attackRate; x++) {
+		target->takeDamage(this->m_attack);
+	}
+	this->attackRate = 1;
 }
 
+void Fighter::Special1() {
+	attackRate++;
+}
+
+void Fighter::stats() const {
+	cout << this->m_name << " the Fighter" << endl;
+	cout << "----------------------------------" << endl;
+	cout << "Health: " << this->m_currHealth << "/" << this->m_maxHealth << endl;
+	cout << "Attack: " << this->m_attack << endl;
+	cout << "Defense: " << this->m_defense << endl;
+	cout << "Speed: " << this->m_speed << endl;
+	cout << "Luck: " << this->m_luck << endl;
+}

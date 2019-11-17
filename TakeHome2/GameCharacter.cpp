@@ -15,7 +15,7 @@ GameCharacter::GameCharacter()
 }
 // compares this object of gameCHarecter to one passed in, so that health values can be compared to return a bool
 bool GameCharacter::compareHealth(const GameCharacter& a) const { 
-	if (this->m_health >= a.m_health) {
+	if (this->m_maxHealth >= a.m_maxHealth) {
 		return true;
 	}
 	else {
@@ -25,7 +25,7 @@ bool GameCharacter::compareHealth(const GameCharacter& a) const {
 // set method for GameCharecter
 void GameCharacter::spawn(role typeID, int health, int speed) { // create an object
 	this->m_typeID = typeID;
-	this->m_health = health;
+	this->m_maxHealth = health;
 	this->m_speed = speed;
 }
 // print to the screen the typeID, used to draw its position within the gameScreen
@@ -34,13 +34,13 @@ void GameCharacter::render() {
 }
 // print all stats relating to the object
 void GameCharacter::stats() const { 
-	cout << "Type: " << this->m_typeID << endl;
+	/*cout << "Type: " << this->m_typeID << endl;
 	cout << "Remaining Health: " << this->m_health << endl;
-	cout << "Speed: " << abs(this->m_speed) << endl;
+	cout << "Speed: " << abs(this->m_speed) << endl;*/
 }
 //return true if its  health is greater than 0
 bool GameCharacter::isAlive() {
-	if (this->m_health > 0) {
+	if (this->m_maxHealth > 0) {
 		return true;
 	}
 	else {
@@ -49,7 +49,7 @@ bool GameCharacter::isAlive() {
 }
 // sets GameCharacter's m_health value to 0, called when the charecter is to be removed after dieing 
 void GameCharacter::killOff() {
-	this->m_health = 0;
+	this->m_maxHealth = 0;
 }
 // randomises the position of GameCharacter
 void GameCharacter::RandomPos() {
@@ -76,12 +76,12 @@ void GameCharacter::changePos(int x, int y) {
 }
 
 void GameCharacter::takeDamage(int damage) {
-	this->m_health -= damage;
+	this->m_maxHealth -= damage;
 }
-void GameCharacter::action(list<GameCharacter*> battleGrid) {
+void GameCharacter::move(list<GameCharacter*> battleGrid) {
 
 }
-void GameCharacter::attack(list<GameCharacter*> battleGrid) {
+void GameCharacter::attack(GameCharacter* target) {
 
 }
 void GameCharacter::Special1() {
@@ -94,6 +94,11 @@ int GameCharacter::getDistance(GameCharacter target) {
 	return sqrt(pow(target.getXpos() - this->getXpos(), 2) +
 		pow(target.getYpos() - this->getYpos(), 2) * 1.0);
 	//return (this->getYpos() - target.getYpos())/(this->getXpos() - target.getXpos());
+}
+
+void GameCharacter::SetPos(int x, int y) {
+	this->m_xPos = x;
+	this->m_yPos = y;
 }
 
 

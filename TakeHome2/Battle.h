@@ -3,6 +3,7 @@
 #include "Goblin.h"
 #include "InputHandler.h";
 #include "Dijkstra's Algorithm.h"
+#include "Party.h"
 #include <list>;
 
 class Battle {
@@ -14,7 +15,7 @@ private:
 	list<string> battleReview;
 	InputHandler i;
 public:
-	Battle();
+	Battle(Party p);
 	// one round of battle, so player input, action, and result
 	void roundOfBattle();
 	// check health to see whos dead

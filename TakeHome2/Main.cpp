@@ -2,6 +2,7 @@
 #include "Battle.h"
 #include "StoryTeller.h"
 #include "Creator.h"
+#include "Party.h"
 //--------------------------------------------
 //	Tomás Ryan
 //	k00243524
@@ -48,16 +49,18 @@ int main() {
 	//	/*system("Pause");
 	//	cout << "----------------------------------------" << endl;*/
 	//}
-	Battle b = Battle();
+	//Battle b = Battle();
+	////b.printBattle();
+	//b.roundOfBattle();
+	//b.updateBattleBoard();
 	//b.printBattle();
-	b.roundOfBattle();
-	b.updateBattleBoard();
-	b.printBattle();
-	b.roundOfBattle();
-	b.updateBattleBoard();
-	b.printBattle();
-	b.roundOfBattle();
-	b.updateBattleBoard();
-	b.printBattle();
+	//b.roundOfBattle();
+	//b.updateBattleBoard();
+	//b.printBattle();
+	//b.roundOfBattle();
+	//b.updateBattleBoard();
+	//b.printBattle();
+	Party p = Party();
+	Battle b = Battle(p);
 	system("Pause");
 }
