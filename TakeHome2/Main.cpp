@@ -61,6 +61,10 @@ int main() {
 	//b.updateBattleBoard();
 	//b.printBattle();
 	Party p = Party();
-	Battle b = Battle(p);
+	list<int> testBattle = { 7, 7, 7, 7 };
+	EnemyEncounter e = EnemyEncounter(testBattle);
+	Battle b = Battle(p, e);
+	b.printBattle();
+	b.battleLoop();
 	system("Pause");
 }

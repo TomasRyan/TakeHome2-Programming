@@ -5,6 +5,7 @@
 #include "Dijkstra's Algorithm.h"
 #include "Party.h"
 #include <list>;
+#include "EnemyEncounter.h"
 
 class Battle {
 private:
@@ -14,10 +15,11 @@ private:
 	//list<Node*> battleGrid[8][8];
 	list<string> battleReview;
 	InputHandler i;
+	Random r = Random();
 public:
-	Battle(Party p);
+	Battle(Party p, EnemyEncounter e);
 	// one round of battle, so player input, action, and result
-	void roundOfBattle();
+	void battleLoop();
 	// check health to see whos dead
 	void healthCheck();
 	// print the battle scene
@@ -26,4 +28,7 @@ public:
 	void printBattleReview();
 	// update battleList()
 	void updateBattleBoard();
+
+	void removeDead();
+	bool overCheck();
 };

@@ -1,4 +1,8 @@
 #pragma once
+enum position {
+	front,
+	back
+};
 enum role
 {
 	blank,

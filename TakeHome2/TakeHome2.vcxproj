@@ -155,7 +155,7 @@
     <ClCompile Include="Chapter.cpp" />
     <ClCompile Include="Cleric.cpp" />
     <ClCompile Include="Creator.cpp" />
-    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyEncounter.cpp" />
     <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="GameCharacter.cpp" />
     <ClCompile Include="Goblin.cpp" />
@@ -174,7 +174,7 @@
     <ClInclude Include="Chapter.h" />
     <ClInclude Include="Cleric.h" />
     <ClInclude Include="Creator.h" />
-    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyEncounter.h" />
     <ClInclude Include="Fighter.h" />
     <ClInclude Include="GameCharacter.h" />
     <ClInclude Include="Goblin.h" />
@@ -186,8 +186,15 @@
     <ClInclude Include="Paladin.h" />
     <ClInclude Include="Party.h" />
     <ClInclude Include="Random.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="StoryTeller.h" />
     <ClInclude Include="Thief.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TakeHome2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

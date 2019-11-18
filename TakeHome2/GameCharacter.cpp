@@ -40,7 +40,7 @@ void GameCharacter::stats() const {
 }
 //return true if its  health is greater than 0
 bool GameCharacter::isAlive() {
-	if (this->m_maxHealth > 0) {
+	if (this->m_currHealth > 0) {
 		return true;
 	}
 	else {
@@ -49,7 +49,7 @@ bool GameCharacter::isAlive() {
 }
 // sets GameCharacter's m_health value to 0, called when the charecter is to be removed after dieing 
 void GameCharacter::killOff() {
-	this->m_maxHealth = 0;
+	this->m_currHealth = 0;
 }
 // randomises the position of GameCharacter
 void GameCharacter::RandomPos() {
@@ -76,7 +76,10 @@ void GameCharacter::changePos(int x, int y) {
 }
 
 void GameCharacter::takeDamage(int damage) {
-	this->m_maxHealth -= damage;
+	this->m_currHealth -= damage;
+	if (this->m_currHealth <= 0) {
+		this->m_currHealth = 0;
+	}
 }
 void GameCharacter::move(list<GameCharacter*> battleGrid) {
 

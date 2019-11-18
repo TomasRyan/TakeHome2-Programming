@@ -1,9 +1,18 @@
 #include "Goblin.h";
-Goblin::Goblin(int x, int y, int health) {
+Goblin::Goblin(int health) {
 	this->m_typeID = goblin;
-	this->m_xPos = x;
-	this->m_yPos = y;
 	this->m_maxHealth = health;
+	this->m_currHealth = health;
+}
+
+Goblin::Goblin() {
+	this->m_typeID = goblin;
+	this->m_maxHealth = 15;
+	this->m_currHealth = 15;
+	this->m_attack = 5;
+	this->m_defense = 4;
+	this->m_luck = 2;
+	this->m_speed = 3;
 }
 
 void Goblin::move(list<GameCharacter*> battleGrid) {
@@ -58,6 +67,25 @@ void Goblin::move(list<GameCharacter*> battleGrid) {
 		if (canAttack == true && moveCounter < this->m_speed) {
 			this->attack(target);
 			moveCounter++;
+		}
+		// if collidiing then push teh other one away1
+		for (GameCharacter* check : battleGrid) {
+			while (check->getXpos() == this->getXpos() && check->getYpos() == this->getYpos() && check != this) {
+				this->m_xPos -= directionX;
+				this->m_yPos -= directionY;
+				while (this->m_xPos < 0) {
+					this->m_xPos++;
+				}
+				while (this->m_xPos > 7) {
+					this->m_xPos--;
+				}
+				while (this->m_yPos < 0) {
+					this->m_yPos++;
+				}
+				while (this->m_yPos > 7) {
+					this->m_yPos--;
+				}
+			}
 		}
 	}
 	if (canAttack == true && moveCounter < this->m_speed) {

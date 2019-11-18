@@ -11,5 +11,6 @@ public:
 	void attack(GameCharacter* target);
 	virtual void Special1();
 	virtual void stats() const;
+	int getArmourBoost();
 	// virtual, so no definition within GameCharacter, check player and enemy for definition
 };

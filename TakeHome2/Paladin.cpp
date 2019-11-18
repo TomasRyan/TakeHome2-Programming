@@ -64,9 +64,24 @@ void Paladin::move(list<GameCharacter*> battleGrid) {
 		else if (distanceToTarget <= 1) {
 			canAttack = true;
 		}
-		if (this->PositionCheck(target) == true) {
-			this->m_xPos -= directionX;
-			this->m_yPos -= directionY;
+		// if collidiing then push teh other one away1
+		for (GameCharacter* check : battleGrid) {
+			while (check->getXpos() == this->getXpos() && check->getYpos() == this->getYpos() && check != this) {
+				this->m_xPos -= directionX;
+				this->m_yPos -= directionY;
+				while (this->m_xPos < 0) {
+					this->m_xPos++;
+				}
+				while (this->m_xPos > 7) {
+					this->m_xPos--;
+				}
+				while (this->m_yPos < 0) {
+					this->m_yPos++;
+				}
+				while (this->m_yPos > 7) {
+					this->m_yPos--;
+				}
+			}
 		}
 	}
 	if (canAttack == true && moveCounter < this->m_speed) {
@@ -91,5 +106,9 @@ void Paladin::stats() const {
 	cout << "Defense: " << this->m_defense << endl;
 	cout << "Speed: " << this->m_speed << endl;
 	cout << "Luck: " << this->m_luck << endl;
+}
+
+int Paladin::getArmourBoost() {
+	return this->ArmourAddition;
 }
 

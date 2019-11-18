@@ -136,6 +136,36 @@ list<Chapter> Creator::create() {
 	Chapter a3Chapter(a3chapterID, a3mainText, a3Responses, a3ConnectedChapters, a3PossablePaths);
 	listOfChapters.push_back(a3Chapter);
 	//--------------------------------------------------
+	//chapter a1 // chapter 0
+	int a4chapterID = 3;
+	string a4mainText = "this is a test";
+	list<string> a4Responses;
+	string a4Response1 = "temp1";	// error
+	string a4Response2 = "temp2";	// look
+	string a4Response3 = "temp3";	// talk
+	string a4Response4 = "temp1";	// use
+	string a4Response5 = "temp2";	// go
+	string a4Response6 = "temp3";	// attack
+	string a4Response7 = "temp1";	// pickup
+	string a4Response8 = "temp2";	// open
+	string a4Response9 = "temp3";	// rest
+	string a4Response10 = "temp1";	// inspect
+	a4Responses.push_back(a4Response1);
+	a4Responses.push_back(a4Response2);
+	a4Responses.push_back(a4Response3);
+	a4Responses.push_back(a4Response4);
+	a4Responses.push_back(a4Response5);
+	a4Responses.push_back(a4Response6);
+	a4Responses.push_back(a4Response7);
+	a4Responses.push_back(a4Response8);
+	a4Responses.push_back(a4Response9);
+	a4Responses.push_back(a4Response10);
+	list<int> a4ConnectedChapters = { 0,0,0,0,0,0,0,0,0,0 }; // default this back to the scene id
+	list<string> a4PossablePaths;
+	a4PossablePaths.push_back("Idunno");
+	Chapter a4Chapter(a4chapterID, a4mainText, a4Responses, a4ConnectedChapters, a4PossablePaths);
+	listOfChapters.push_back(a4Chapter);
+	//--------------------------------------------------
 	// THE END
 	return listOfChapters;
 }
